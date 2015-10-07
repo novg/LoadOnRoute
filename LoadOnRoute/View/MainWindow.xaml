@@ -1,0 +1,29 @@
+﻿<Window x:Class="LoadOnRoute.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:LoadOnRoute.ViewModel"
+        Title="Load on the Routes" Height="350" Width="525">
+    <Window.DataContext>
+        <local:ViewModel />
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <ToolBar Grid.Row="0">
+            <Button ToolTip="Settings" Padding="0" >
+                <ContentControl Height="32" Template="{StaticResource IconSettings}" />
+            </Button>
+            <Button ToolTip="Save" Padding="0" >
+                <ContentControl Height="32" Template="{StaticResource IconSave}" Margin="3,0,3,0"/>
+            </Button>
+            <Button ToolTip="About" Padding="0" >
+                <ContentControl Height="32" Template="{StaticResource IconInfo}" />
+            </Button>
+        </ToolBar>
+    </Grid>
+</Window>
